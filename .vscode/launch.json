@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\algos\\4 Wherefore art thou.js"
+            "program": "${workspaceFolder}\\algos\\tests.js"
         }
     ]
 }
