@@ -1,13 +1,15 @@
-function fearNotLetter(str) {
-  for(let i = 0; i<str.length; i++){
-    if(str.charCodeAt(i) !== str.charCodeAt(0)+i){
-      return String.fromCharCode((str.charCodeAt(i)-1));
+function uniteUnique(arr) {
+  let temp;
+
+  for(a of arr){
+    for(n of a){
+      
     }
   }
-  return undefined;
+
+  return [...arr];
 }
 
 console.log(
-  fearNotLetter("abce") +" " +fearNotLetter("bcdf")
+  uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])
 );
-
