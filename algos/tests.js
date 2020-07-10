@@ -1,15 +1,9 @@
-function uniteUnique(arr) {
-  let temp;
-
-  for(a of arr){
-    for(n of a){
-      
-    }
-  }
-
-  return [...arr];
+function sumFibs(num) {
+  return num;
 }
 
-console.log(
-  uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1])
-);
+sumFibs(4);
+sumFibs(4000000)
+sumFibs(4)
+sumFibs(75024)
+sumFibs(75025)
