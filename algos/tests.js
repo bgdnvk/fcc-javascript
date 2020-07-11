@@ -1,11 +1,6 @@
-function sumPrimes(num) {
-  return num;
+function smallestCommons(arr) {
+  return arr;
 }
 
-console.log(
-  sumPrimes(10)
-);
 
-console.log(
-  sumPrimes(977)
-);
+smallestCommons([1,5]);
