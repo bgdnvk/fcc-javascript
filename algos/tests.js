@@ -1,9 +1,11 @@
-function sumFibs(num) {
+function sumPrimes(num) {
   return num;
 }
 
-sumFibs(4);
-sumFibs(4000000)
-sumFibs(4)
-sumFibs(75024)
-sumFibs(75025)
+console.log(
+  sumPrimes(10)
+);
+
+console.log(
+  sumPrimes(977)
+);
