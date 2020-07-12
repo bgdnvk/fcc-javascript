@@ -1,9 +1,22 @@
-function binaryAgent(str) {
-  return String.fromCharCode(
-    ...str.split(" ").map((char) => {
-      return parseInt(char, 2);
-    })
-  );
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+
+  //Looping through each key in arr object
+  for (var prop in arr) {
+    //Rounding off the orbital period value
+    var orbitalPer = Math.round(
+      2 * Math.PI * Math.sqrt(Math.pow(arr[prop].avgAlt + earthRadius, 3) / GM)
+    );
+    //deleting the avgAlt property
+    delete arr[prop].avgAlt;
+    //adding orbitalPeriod property
+    arr[prop].orbitalPeriod = orbitalPer;
+  }
+
+  return arr;
 }
 
-binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+console.log(
+  orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }])
+);
