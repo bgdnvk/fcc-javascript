@@ -1,5 +1,10 @@
-function dropElements(arr, func) {
-  return arr;
+function steamrollArray(arr) {
+  let tarr = [];
+  
+  return tarr;
 }
 
-dropElements([1, 2, 3], function(n) {return n < 3; });
+console.log(
+  steamrollArray([1, [2], [3, [[4]]]])
+
+);
