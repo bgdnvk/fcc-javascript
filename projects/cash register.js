@@ -33,6 +33,17 @@ function checkCashRegister(price, cash, cid) {
 
   arr_cash_in_register.reverse();
 
+  /**
+   * last bug
+   */
+  let pos = values.findIndex();
+  function changePos(change){
+    
+  }
+   /**
+    * 
+    */
+
   
   arr_cash_in_register.forEach(money_inArr => {
     let cash = money_inArr[1];
@@ -67,7 +78,11 @@ function checkCashRegister(price, cash, cid) {
     
     let num_bills;
    
+    console.log("count bills");
+    console.log(cash);
+    console.log(bill);
     
+    // if((cash*100)%(bill*100) === 0){
     if((cash*100)%(bill*100) === 0){
       
       num_bills = Math.floor(cash/bill);
