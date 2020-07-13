@@ -20,7 +20,7 @@ function convertToRoman(num) {
     for(let i in roman){
       console.log(i);
       console.log("roman i"+roman[i]);
-      var q = Math.floor(num / roman[i]);
+      let q = Math.floor(num / roman[i]);
       console.log("q is "+q);
       num -= q * roman[i];
       str += i.repeat(q);
