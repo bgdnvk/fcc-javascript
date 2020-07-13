@@ -1,38 +1,33 @@
-function palindrome(str) {
-  // 
-  const regex = /[a-zA-Z0-9]/;
-  
-  let letters_arr = [...str].filter(e => regex.test(e))
+function convertToRoman(num) {
+  const roman = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
+  };
 
-  let reversed = [...letters_arr].reverse();
-  
-  let n1 = letters_arr.join().toLowerCase();
-  let n2 = reversed.join().toLowerCase();
-  
-  // console.log("reversed is "+reversed);
-  // console.log(n1);
-  // console.log("normal is: "+letters_arr);
-  // console.log(n2);
+  let str = "";
+  //ES6 uses Object.keys(roman)
+  for(let i in roman){
+    console.log(i);
+    console.log("roman i"+roman[i]);
+    var q = Math.floor(num / roman[i]);
+    console.log("q is "+q);
+    num -= q * roman[i];
+    str += i.repeat(q);
+  }
 
-  return n1 === n2? true: false;
-
-  // return JSON.stringify(letters_arr) === JSON.stringify(reversed)?
-  // true: false;
-}
-
-
-// console.log(
-// palindrome("eye")
-// );
-console.log(
-  palindrome("A man, a plan, a canal. Panama")
-);
-// console.log(
-//   palindrome("My age is 0, 0 si ega ym.")
-// );
-// console.log(
-//   palindrome("not a palindrome")
-// );
-console.log(
-  palindrome("_eye")
-);
+  return str;
+ }
+ 
+ convertToRoman(36);
+ 
